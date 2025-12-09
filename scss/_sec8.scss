@@ -1,0 +1,83 @@
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin position($position, $top, $left){
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin font($family, $weight, $style, $size, $lineheight, $color){
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+}
+
+.sec8-wrap{
+    width: 100%;
+    height: 532px;
+    position: relative;
+}
+.sec8-title{
+    h1{
+        @include font("Playfair Display", 700, bold, 36px, 160%, var(--main-color));
+        @include margin(-550px,0,0,890px);
+    }
+}
+.sec8-img{
+    @include margin(50px,0,0,90px);
+}
+.sec8-pol{
+    @include margin(30px,0,0,903px);
+    h3{
+        @include font("Montserrat",400,regular,24px,160%,#121212);
+    }
+    .sec8-hr1{
+        width: 608px;
+        border: 1px solid #524848;
+        margin-bottom: 30px;
+    }
+    .sec8-vector56{
+        @include position(absolute,290px,1485px);
+    }
+    .sec8-hr2{
+        width: 280px;
+        border: 1px solid #524848;
+    }
+    .sec8-vector561{
+        @include position(absolute,360px,1155px);
+    }
+    .sec8-vector562{
+margin-left: 250px;
+position: absolute;
+top: 35px;
+}
+.chas{
+@include position(absolute,20px,0px);
+}
+span{
+    @include position(absolute,325px,1230px);
+}
+}
+  .sec8-hr3{
+        width: 280px;
+        border: 1px solid #524848;
+        position: absolute;
+        top: 55px;
+
+    }
+.sec8-button{
+    button{
+        width: 222px;
+        height: 54px;
+        background-color: var(--main-color);
+        border: none;
+        @include font("Montserrat",700,bold,18px,160%,var(--text-color));
+        @include margin(100px,0,0,1284px);
+    }
+}

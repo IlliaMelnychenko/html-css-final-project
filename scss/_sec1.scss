@@ -1,0 +1,69 @@
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin position($position, $top, $left){
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin font($family, $weight, $style, $size, $lineheight, $color){
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+}
+
+.sec1-wrap{
+    width: 100%;
+    height: 693px;
+    background-image: url(/images/Rectangle\ 4.png);
+    position: relative;
+}
+.sec1-text{
+    h1{
+        @include font("Playfair Display", 700, bold, 54px, 160%, var(--main-color));
+        @include position(absolute, 260px, 90px);       //Бо сунеться разом з фоном//
+     
+     
+       
+    }
+    p{
+        @include font("Montserrat", 400, regular, 16px, 160%, #524848);
+        @include position(absolute, 366px, 90px);
+    }
+}
+.sec1-button{
+    button{
+        background-color: var(--main-color);
+        width: 268px;
+        height: 53px;
+        border: none;
+        cursor: pointer;
+        @include position(absolute, 436px, 90px);
+        @include font("Montserrat", 700, bold, 18px, 160%, var(--text-color));
+    }
+}
+.sec1-social{
+    p{
+        a{
+        color: black;
+      
+}
+}
+}
+
+  .Facebook{
+            @include position(absolute, 640px, 90px);
+        }
+        .Instagram{
+            @include position(absolute, 640px, 202px);
+        }
+        .Twitter{
+            @include position(absolute, 640px, 308px);
+        }
+     

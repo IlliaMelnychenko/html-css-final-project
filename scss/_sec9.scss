@@ -1,0 +1,68 @@
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin position($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+@mixin font($family, $weight, $style, $size, $lineheight, $color) {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+}
+
+.sec9-wrap {
+    width: 100%;
+    height: 491px;
+    position: relative;
+    margin-bottom: 112px;
+}
+
+.sec9-title {
+    @include margin(100px, 0, 0, 696px);
+
+    h1 {
+        @include font("Playfair Display", 700, bold, 36px, 160%, var(--main-color));
+    }
+}
+
+.sec9-img {
+    @include margin(30px, 0, 0, 90px);
+}
+
+.sec9-text {
+    @include margin(-400px, 0, 0, 931px);
+
+    h4 {
+        @include font("Montserrat", 400, regular, 24px, 160%, #000000);
+    }
+
+    p {
+        @include font("Inter", 400, regular, 24px, 160%, #9C2482);
+        margin-bottom: 10px;
+    }
+
+    img {
+        @include margin(5px, 25px, 0, 0);
+    }
+}
+
+.sec9-button {
+    button {
+        width: 222px;
+        height: 54px;
+        background-color: var(--main-color);
+        border: none;
+        @include font("Montserrat", 700, bold, 18px, 160%, var(--text-color));
+        @include margin(53px, 0, 0, 931px);
+    }
+}

@@ -1,0 +1,44 @@
+@import "./header","./sec1","./sec2","./sec3","./sec4","./sec5","./sec6","./sec7","./sec8","./sec9","./footer";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+:root{
+    --main-color:#9C2482;
+    --text-color:#F5F5F5;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin position($position, $top, $left){
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin font($family, $weight, $style, $size, $lineheight, $color){
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+}

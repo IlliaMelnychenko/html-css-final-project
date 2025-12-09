@@ -1,0 +1,77 @@
+
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin position($position, $top, $left){
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin font($family, $weight, $style, $size, $lineheight, $color){
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+}
+
+
+
+
+.header-wrap {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    background-color: var(--main-color);
+    align-items: center;
+    position: relative;
+}
+
+.header-logo {
+    h2 {
+        @include font("Playfair Display", 400, regular, 32px, 160%, var(--text-color));
+        @include position(absolute, 20px, 190px);
+
+    }
+
+    img {
+        @include position(absolute, 20px, 90px);
+
+    }
+
+    @include margin(0, 0, 18px, 90px);
+}
+
+.header-nav {
+    margin-left: 330px;
+
+    .header-item {
+        display: inline-block;       
+         a {
+          @include font("Montserrat", 700, bold, 16px, 160%, var(--text-color));
+            margin-right: 63px;
+        }
+    }
+}
+.header-button{
+    button{
+        img{
+            @include position(absolute, 30px, 1270px);
+        }
+        h2{
+            margin-left: 30px;
+        }
+        margin-left: 60px;
+        width: 268px;
+    height: 54px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid;
+    border-color: var(--text-color);
+    @include font("Montserrat", 400, regular, 10px, 160%, var(--text-color));
+}
+}

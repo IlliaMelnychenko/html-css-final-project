@@ -1,0 +1,95 @@
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin position($position, $top, $left){
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin font($family, $weight, $style, $size, $lineheight, $color){
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+}
+
+.sec5-wrap{
+    width: 100%;
+    height: 708px;
+    position: relative;
+    margin-top: 60px;
+}
+.sec5-title{
+    margin-left: 607px;
+    h1{
+        margin-top: 150px;
+        @include font("Playfair Display", 700, bold, 40px, 160%, var(--main-color));
+    }
+}
+.sec5-titles{
+    display: flex;
+    gap: 60px;
+    @include margin(25px,0,0,242px);
+    h2{
+        @include font("Montserrat", 700, bold, 24px, 160%, #524848);
+    }
+    span{
+        @include font("Montserrat", 700, bold, 24px, 160%, #121212);
+    }
+}
+.sec5-photos{
+    .sec5-strilka1{
+        @include position(absolute, 314px, 90px);
+    }
+    .sec5-ellipse1{
+        @include position(absolute, 146px, 221px);
+    }
+    .sec5-ellipse2{
+        @include position(absolute, 146px, 650px);
+    }
+    .sec5-ellipse3{
+        @include position(absolute, 146px, 1079px);
+    }
+    .sec5-strilka2{
+        position: absolute;
+        top: 314px;
+        right: 20px;
+    }
+}
+.sec5-text{
+
+    h4{
+        @include font("Montserrat", 700, bold, 18px, 160%, var(--main-color));
+    
+    }
+    p{
+        @include font("Montserrat", 700, bold, 18px, 160%, #524848);
+    }
+    .zah{
+        @include margin(320px,0,0,290px);
+    }
+    .text1{
+        @include margin(8px,0,0,-870px);
+        text-align: center;
+    }
+    .zah2{
+        @include margin(-95px,0,0,740px);
+    }
+    .text2{
+        @include margin(8px,0,0,30px);
+        text-align: center;
+    }
+    .zah3{
+        @include margin(-95px,0,0,1170px);
+    }
+    .text3{
+        @include margin(8px,0,0,900px);
+        text-align: center;
+    }
+}
+
